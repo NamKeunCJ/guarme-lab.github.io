@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>María Camila Rueda Prado | Ingeniera de Sistemas - Desarrolladora Full Stack</title>
+<meta name="description" content="Portafolio de María Camila Rueda Prado, Ingeniera de Sistemas y Desarrolladora Full Stack. Desarrollo web, sistemas administrativos, APIs y consultoría tecnológica.">
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy: #14213d;
+    --navy-soft: #1e3050;
+    --teal: #0e9c94;
+    --teal-dark: #0a7a73;
+    --teal-light: #e5f6f4;
+    --gold: #f4b740;
+    --ink: #34405a;
+    --muted: #6b7686;
+    --bg-soft: #f6f8f9;
+    --line: #e7ebee;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:84px;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:#fff;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.display-font{
+    font-family:'Poppins', sans-serif;
+    color:var(--navy);
+  }
+  a{text-decoration:none;}
+  .section{padding:96px 0;}
+  .section-tight{padding:72px 0;}
+  @media (max-width: 767px){
+    .section{padding:64px 0;}
+  }
+
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.72rem;
+    font-weight:700;
+    color:var(--teal-dark);
+  }
+
+  .section-title{
+    font-weight:700;
+    font-size:2.1rem;
+    position:relative;
+    display:inline-block;
+  }
+  .section-title::after{
+    content:"";
+    display:block;
+    width:52px;
+    height:4px;
+    border-radius:4px;
+    background:var(--gold);
+    margin-top:14px;
+  }
+  .section-title.center::after{margin-left:auto;margin-right:auto;}
+  .section-sub{color:var(--muted); max-width:620px; font-size:1.02rem;}
+
+  /* Navbar */
+  .navbar-custom{
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    box-shadow:0 1px 0 rgba(20,33,61,.06);
+    padding:14px 0;
+    transition:box-shadow .25s ease, padding .25s ease;
+  }
+  .navbar-custom.scrolled{
+    box-shadow:0 6px 22px rgba(20,33,61,.09);
+    padding:10px 0;
+  }
+  .brand-mark{
+    font-family:'Poppins', sans-serif;
+    font-weight:800;
+    font-size:1.35rem;
+    color:var(--navy);
+    letter-spacing:-.01em;
+  }
+  .brand-mark span{color:var(--teal);}
+  .nav-link-custom{
+    font-weight:600;
+    font-size:.94rem;
+    color:var(--navy) !important;
+    margin:0 4px;
+    padding:8px 4px !important;
+    position:relative;
+  }
+  .nav-link-custom::after{
+    content:"";
+    position:absolute;
+    left:4px; right:4px; bottom:2px;
+    height:2px;
+    background:var(--teal);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .25s ease;
+  }
+  .nav-link-custom:hover::after,
+  .nav-link-custom.active::after{transform:scaleX(1);}
+  .nav-link-custom.active{color:var(--teal-dark) !important;}
+  .btn-cv{
+    background:var(--navy);
+    color:#fff !important;
+    font-weight:600;
+    font-size:.88rem;
+    padding:9px 20px;
+    border-radius:30px;
+    border:none;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .btn-cv:hover{background:var(--teal-dark); transform:translateY(-1px); color:#fff;}
+
+  /* Buttons */
+  .btn-teal{
+    background:var(--teal);
+    border:none;
+    color:#fff;
+    font-weight:600;
+    padding:12px 26px;
+    border-radius:30px;
+    transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-teal:hover{background:var(--teal-dark); color:#fff; transform:translateY(-2px); box-shadow:0 10px 22px rgba(14,156,148,.28);}
+  .btn-outline-navy{
+    background:transparent;
+    border:1.5px solid var(--navy);
+    color:var(--navy);
+    font-weight:600;
+    padding:11px 26px;
+    border-radius:30px;
+    transition:all .2s ease;
+  }
+  .btn-outline-navy:hover{background:var(--navy); color:#fff; transform:translateY(-2px);}
+
+  /* Hero */
+  .hero{
+    position:relative;
+    padding-top:150px;
+    padding-bottom:80px;
+    background:linear-gradient(180deg, #f6faf9 0%, #ffffff 60%);
+    overflow:hidden;
+  }
+  .hero-greeting{
+    font-size:1.15rem;
+    color:var(--ink);
+    font-weight:500;
+  }
+  .hero-name{
+    font-weight:800;
+    line-height:1.08;
+    font-size:clamp(2.2rem, 4.6vw, 3.4rem);
+  }
+  .hero-name .last{color:var(--teal);}
+  .hero-role{
+    font-weight:700;
+    letter-spacing:.03em;
+    color:var(--navy-soft);
+    font-size:1.02rem;
+    margin-top:8px;
+  }
+  .hero-role-sub{
+    font-weight:700;
+    letter-spacing:.06em;
+    color:var(--teal-dark);
+    font-size:.86rem;
+    text-transform:uppercase;
+  }
+  .hero-text{color:var(--muted); font-size:1.02rem; max-width:480px; margin-top:18px;}
+  .hero-socials a{
+    width:40px; height:40px;
+    display:inline-flex; align-items:center; justify-content:center;
+    border-radius:50%;
+    border:1.5px solid var(--line);
+    color:var(--navy);
+    margin-right:10px;
+    transition:all .2s ease;
+  }
+  .hero-socials a:hover{background:var(--navy); color:#fff; border-color:var(--navy); transform:translateY(-3px);}
+
+  .hero-photo-wrap{
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  .hero-blob{
+    position:absolute;
+    width:390px; height:390px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, #14b3a8, #0a7a73);
+    top:14px;
+    z-index:0;
+  }
+  .hero-photo{
+    position:relative;
+    z-index:1;
+    width:340px;
+    max-width:100%;
+    border-radius:24px;
+    box-shadow:0 25px 50px rgba(20,33,61,.18);
+  }
+  .hero-dots{
+    position:absolute;
+    right:8%;
+    top:8%;
+    width:70px;
+    opacity:.55;
+    z-index:0;
+  }
+
+  .stat-card{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 16px 40px rgba(20,33,61,.09);
+    padding:22px 10px;
+    border:1px solid var(--line);
+  }
+  .stat-icon{
+    width:42px; height:42px;
+    border-radius:12px;
+    background:var(--teal-light);
+    color:var(--teal-dark);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.15rem;
+    margin:0 auto 8px;
+  }
+  .stat-num{font-weight:800; color:var(--navy); font-size:1.25rem; font-family:'Poppins',sans-serif;}
+  .stat-label{font-size:.76rem; color:var(--muted); font-weight:600;}
+
+  /* Sobre mi */
+  .about-photo{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 25px 50px rgba(20,33,61,.15);
+  }
+  .skill-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px 16px;
+    height:100%;
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .skill-card:hover{transform:translateY(-4px); box-shadow:0 14px 30px rgba(20,33,61,.09); border-color:var(--teal);}
+  .skill-icon{
+    width:38px; height:38px;
+    border-radius:10px;
+    background:var(--teal-light);
+    color:var(--teal-dark);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1rem;
+    margin-bottom:10px;
+  }
+  .skill-title{font-weight:700; color:var(--navy); font-size:.94rem; margin-bottom:2px;}
+  .skill-sub{font-size:.78rem; color:var(--muted); margin:0;}
+
+  .quote-box{
+    background:var(--navy);
+    color:#fff;
+    border-radius:18px;
+    padding:28px 32px;
+    position:relative;
+    font-family:'Poppins', sans-serif;
+    font-weight:500;
+    font-size:1.05rem;
+  }
+  .quote-box i{color:var(--gold); font-size:1.3rem;}
+
+  /* Servicios */
+  .bg-soft{background:var(--bg-soft);}
+  .service-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:26px;
+    height:100%;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .service-card:hover{transform:translateY(-6px); box-shadow:0 20px 40px rgba(20,33,61,.1);}
+  .service-icon{
+    width:50px; height:50px;
+    border-radius:14px;
+    background:var(--teal-light);
+    color:var(--teal-dark);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.35rem;
+    margin-bottom:16px;
+  }
+  .service-card h3{font-size:1.08rem; font-weight:700;}
+  .service-card p{color:var(--muted); font-size:.9rem;}
+  .service-link{color:var(--teal-dark); font-weight:600; font-size:.88rem;}
+  .service-link i{transition:transform .2s ease;}
+  .service-card:hover .service-link i{transform:translateX(4px);}
+
+  .cta-banner{
+    background:linear-gradient(120deg, var(--navy), var(--navy-soft));
+    border-radius:20px;
+    padding:32px 36px;
+    color:#fff;
+  }
+  .cta-banner h4{color:#fff; font-weight:700; margin-bottom:4px;}
+  .cta-banner p{color:#c7d1e0; margin:0;}
+
+  /* Proyectos */
+  .filter-btn{
+    border:1.5px solid var(--line);
+    background:#fff;
+    color:var(--ink);
+    font-weight:600;
+    font-size:.86rem;
+    padding:8px 18px;
+    border-radius:30px;
+    transition:all .2s ease;
+  }
+  .filter-btn.active, .filter-btn:hover{
+    background:var(--teal);
+    border-color:var(--teal);
+    color:#fff;
+  }
+  .project-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    overflow:hidden;
+    height:100%;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .project-card:hover{transform:translateY(-6px); box-shadow:0 22px 45px rgba(20,33,61,.12);}
+  .project-thumb{
+    height:170px;
+    background:linear-gradient(135deg, var(--navy), var(--teal-dark));
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .project-thumb i{font-size:2.4rem; color:rgba(255,255,255,.85);}
+  .project-body{padding:20px;}
+  .project-body h3{font-size:1.02rem; font-weight:700;}
+  .project-body p{font-size:.86rem; color:var(--muted);}
+  .tag{
+    display:inline-block;
+    font-size:.72rem;
+    font-weight:600;
+    color:var(--teal-dark);
+    background:var(--teal-light);
+    padding:3px 10px;
+    border-radius:20px;
+    margin:0 6px 6px 0;
+  }
+  .project-link{color:var(--navy); font-weight:600; font-size:.86rem;}
+
+  /* Clientes */
+  .client-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:24px 18px;
+    text-align:center;
+    height:100%;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .client-card:hover{transform:translateY(-4px); box-shadow:0 16px 32px rgba(20,33,61,.08);}
+  .client-logo{
+    width:52px; height:52px;
+    border-radius:50%;
+    background:var(--teal-light);
+    color:var(--teal-dark);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.4rem;
+    margin:0 auto 12px;
+  }
+  .client-card h4{font-size:.94rem; font-weight:700; color:var(--navy); margin-bottom:4px;}
+  .client-card p{font-size:.8rem; color:var(--muted); margin:0;}
+
+  .dark-stats{
+    background:var(--navy);
+    border-radius:20px;
+    padding:34px 20px;
+    color:#fff;
+  }
+  .dark-stats .stat-num{color:#fff;}
+  .dark-stats .stat-label{color:#aab6c9;}
+  .dark-stats .stat-icon{background:rgba(255,255,255,.1); color:var(--gold);}
+
+  /* Contacto */
+  .contact-item{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    margin-bottom:22px;
+  }
+  .contact-item .ico{
+    width:44px; height:44px;
+    border-radius:12px;
+    background:var(--teal-light);
+    color:var(--teal-dark);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.1rem;
+    flex-shrink:0;
+  }
+  .contact-item h5{font-size:.86rem; font-weight:700; color:var(--navy); margin-bottom:2px;}
+  .contact-item p{font-size:.88rem; color:var(--muted); margin:0;}
+
+  .contact-form-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:32px;
+    box-shadow:0 25px 55px rgba(20,33,61,.08);
+  }
+  .form-control-custom{
+    border:1.5px solid var(--line);
+    border-radius:10px;
+    padding:11px 14px;
+    font-size:.92rem;
+  }
+  .form-control-custom:focus{
+    border-color:var(--teal);
+    box-shadow:0 0 0 3px rgba(14,156,148,.15);
+  }
+
+  .map-placeholder{
+    height:220px;
+    border-radius:18px;
+    background:
+      linear-gradient(rgba(20,33,61,.55), rgba(20,33,61,.55)),
+      repeating-linear-gradient(0deg, #d8e2e5 0 1px, transparent 1px 40px),
+      repeating-linear-gradient(90deg, #d8e2e5 0 1px, transparent 1px 40px),
+      #e9eef0;
+    position:relative;
+    display:flex; align-items:flex-end; padding:16px;
+  }
+  .location-chip{
+    background:#fff;
+    border-radius:14px;
+    padding:14px 18px;
+    box-shadow:0 14px 30px rgba(20,33,61,.15);
+    display:flex; align-items:center; gap:12px;
+  }
+  .location-chip .ico{
+    width:38px;height:38px;border-radius:10px;
+    background:var(--teal-light); color:var(--teal-dark);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .location-chip h6{font-size:.84rem;font-weight:700;color:var(--navy);margin:0;}
+  .location-chip p{font-size:.76rem;color:var(--muted);margin:0;}
+
+  footer{
+    background:var(--navy);
+    color:#c7d1e0;
+    padding:32px 0;
+    font-size:.86rem;
+  }
+  footer a{color:#fff; font-weight:600;}
+
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in-view{opacity:1; transform:translateY(0);}
+
+  #toast-msg{
+    position:fixed;
+    bottom:24px; right:24px;
+    z-index:2000;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand brand-mark" href="#inicio">MC<span>.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="#sobre-mi">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="#clientes">Clientes</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="#contacto">Contactos</a></li>
+      </ul>
+      <a href="#" id="downloadCv" class="btn btn-cv">Descargar CV <i class="bi bi-download ms-1"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO / INICIO -->
+<header class="hero" id="inicio">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6 reveal">
+        <p class="hero-greeting mb-1">¡Hola! Soy</p>
+        <h1 class="hero-name">María Camila<br><span class="last">Rueda Prado</span></h1>
+        <p class="hero-role mb-0">INGENIERA DE SISTEMAS</p>
+        <p class="hero-role-sub">Desarrolladora Full Stack</p>
+        <p class="hero-text">Transformo ideas en soluciones digitales funcionales, escalables y centradas en las personas. Combino tecnología y diseño para crear experiencias que generan valor.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#proyectos" class="btn-teal">Ver proyectos <i class="bi bi-arrow-right ms-1"></i></a>
+          <a href="#contacto" class="btn-outline-navy">Contáctame <i class="bi bi-envelope ms-1"></i></a>
+        </div>
+        <div class="hero-socials mt-4">
+          <a href="https://www.linkedin.com/in/camila-rueda-3913273b3/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="mailto:camila.rueda.0617@gmail.com" aria-label="Correo"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <div class="hero-photo-wrap">
+          <div class="hero-blob"></div>
+          <img class="hero-photo" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="María Camila Rueda Prado">
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-4 g-3 reveal">
+      <div class="col-6 col-md-3">
+        <div class="stat-card text-center">
+          <div class="stat-icon"><i class="bi bi-mortarboard"></i></div>
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Años de formación</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card text-center">
+          <div class="stat-icon"><i class="bi bi-briefcase"></i></div>
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card text-center">
+          <div class="stat-icon"><i class="bi bi-diagram-3"></i></div>
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Proyectos realizados</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card text-center">
+          <div class="stat-icon"><i class="bi bi-heart"></i></div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Comprometida</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SOBRE MI -->
+<section class="section" id="sobre-mi">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6 order-lg-1 order-2 reveal">
+        <p class="eyebrow mb-2">Conóceme</p>
+        <h2 class="section-title mb-4">Sobre mí</h2>
+        <p style="color:var(--muted); font-size:1rem;">Ingeniera de Sistemas y Técnica en Diseño Gráfico con experiencia en desarrollo de software, diseño de interfaces y creación de plataformas web personalizadas.</p>
+        <p style="color:var(--muted); font-size:1rem;">He trabajado en proyectos frontend y backend, integrando bases de datos, APIs REST y sistemas administrativos.</p>
+        <p style="color:var(--muted); font-size:1rem;">Me caracterizo por la creatividad, la adaptabilidad y la capacidad de transformar ideas en soluciones funcionales, optimizadas y enfocadas en la experiencia del usuario.</p>
+
+        <h3 class="mt-4 mb-3" style="font-size:1.15rem; font-weight:700;">Habilidades</h3>
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="bi bi-code-slash"></i></div>
+              <p class="skill-title">Desarrollo Full Stack</p>
+              <p class="skill-sub">Laravel, PHP, Java, Python/Flask</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="bi bi-window"></i></div>
+              <p class="skill-title">Frontend</p>
+              <p class="skill-sub">HTML5, CSS3, JavaScript</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="bi bi-database"></i></div>
+              <p class="skill-title">Bases de datos</p>
+              <p class="skill-sub">PostgreSQL y MySQL</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+              <p class="skill-title">APIs</p>
+              <p class="skill-sub">e integraciones</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="bi bi-git"></i></div>
+              <p class="skill-title">Herramientas</p>
+              <p class="skill-sub">Git y GitHub</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="bi bi-palette"></i></div>
+              <p class="skill-title">UI/UX</p>
+              <p class="skill-sub">Diseño de interfaces responsivas</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="bi bi-arrow-repeat"></i></div>
+              <p class="skill-title">Metodologías</p>
+              <p class="skill-sub">Scrum</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="bi bi-people"></i></div>
+              <p class="skill-title">Soft Skills</p>
+              <p class="skill-sub">Resolución de problemas, creatividad, trabajo en equipo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-box mt-4">
+          <i class="bi bi-quote"></i>
+          Me apasiona aprender, trabajar en equipo y superar desafíos tecnológicos para generar impacto real.
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-2 order-1 reveal">
+        <img class="about-photo" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=900&auto=format&fit=crop" alt="María Camila trabajando en su laptop">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section bg-soft" id="servicios">
+  <div class="container">
+    <p class="eyebrow mb-2">Lo que hago</p>
+    <h2 class="section-title mb-2">Servicios</h2>
+    <p class="section-sub mb-5">Soluciones digitales adaptadas a las necesidades de tu negocio.</p>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-display"></i></div>
+          <h3>Desarrollo Web Full Stack</h3>
+          <p>Aplicaciones web robustas, escalables y a la medida.</p>
+          <a href="#contacto" class="service-link">Ver más <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-kanban"></i></div>
+          <h3>Sistemas Administrativos</h3>
+          <p>Plataformas para la gestión eficiente de información.</p>
+          <a href="#contacto" class="service-link">Ver más <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-diagram-2"></i></div>
+          <h3>APIs REST e Integraciones</h3>
+          <p>Desarrollo e integración de APIs seguras y eficientes.</p>
+          <a href="#contacto" class="service-link">Ver más <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-brush"></i></div>
+          <h3>Diseño de Interfaces (UI/UX)</h3>
+          <p>Experiencias intuitivas, atractivas y funcionales.</p>
+          <a href="#contacto" class="service-link">Ver más <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-gear"></i></div>
+          <h3>Mantenimiento y Soporte</h3>
+          <p>Optimización, actualizaciones y soporte técnico continuo.</p>
+          <a href="#contacto" class="service-link">Ver más <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-lightbulb"></i></div>
+          <h3>Consultoría Tecnológica</h3>
+          <p>Asesoría en arquitectura de software y transformación digital.</p>
+          <a href="#contacto" class="service-link">Ver más <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner mt-5 d-flex flex-wrap align-items-center justify-content-between gap-3 reveal">
+      <div>
+        <h4>¿Tienes un proyecto en mente?</h4>
+        <p>Conversemos y hagámoslo realidad.</p>
+      </div>
+      <a href="#contacto" class="btn-teal">Contáctame <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="section" id="proyectos">
+  <div class="container">
+    <p class="eyebrow mb-2">Portafolio</p>
+    <h2 class="section-title mb-4">Proyectos destacados</h2>
+
+    <div class="d-flex flex-wrap gap-2 mb-4 reveal" id="filterGroup">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="sistemas">Sistemas</button>
+      <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+      <button class="filter-btn" data-filter="datos">Análisis de datos</button>
+    </div>
+
+    <div class="row g-4" id="projectsGrid">
+      <div class="col-md-6 col-lg-4 project-item reveal" data-cat="sistemas web">
+        <div class="project-card">
+          <div class="project-thumb"><i class="bi bi-globe-americas"></i></div>
+          <div class="project-body">
+            <h3>Proyecto TULATO CREALAB</h3>
+            <p>Plataforma web para gestión y visualización de información territorial.</p>
+            <div class="mt-2"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">PostgreSQL</span></div>
+            <a href="#" class="project-link mt-2 d-inline-block">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 project-item reveal" data-cat="ecommerce web">
+        <div class="project-card">
+          <div class="project-thumb"><i class="bi bi-cart3"></i></div>
+          <div class="project-body">
+            <h3>MicroStore Electrónica Plataforma Web</h3>
+            <p>E-commerce de componentes electrónicos automotrices.</p>
+            <div class="mt-2"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span></div>
+            <a href="#" class="project-link mt-2 d-inline-block">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 project-item reveal" data-cat="datos">
+        <div class="project-card">
+          <div class="project-thumb"><i class="bi bi-bar-chart-line"></i></div>
+          <div class="project-body">
+            <h3>Proyecto MTE Universidad CESMAG</h3>
+            <p>Modelo de predicción con análisis de datos.</p>
+            <div class="mt-2"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span></div>
+            <a href="#" class="project-link mt-2 d-inline-block">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center mt-4 text-muted d-none" id="noResults">No hay proyectos en esta categoría todavía.</p>
+
+    <div class="text-center mt-5 reveal">
+      <a href="#" class="btn-outline-navy">Ver todos los proyectos</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES -->
+<section class="section bg-soft" id="clientes">
+  <div class="container">
+    <p class="eyebrow mb-2">Confianza</p>
+    <h2 class="section-title mb-2">Clientes y experiencia</h2>
+    <p class="section-sub mb-5">He tenido la oportunidad de trabajar con organizaciones y empresas en proyectos que generan impacto y valor.</p>
+
+    <div class="row g-3">
+      <div class="col-6 col-md-3 reveal">
+        <div class="client-card">
+          <div class="client-logo"><i class="bi bi-building"></i></div>
+          <h4>CREALAB</h4>
+          <p>Desarrollo de software e innovación digital</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="client-card">
+          <div class="client-logo"><i class="bi bi-bank"></i></div>
+          <h4>Universidad CESMAG</h4>
+          <p>Educación superior y proyectos tecnológicos</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="client-card">
+          <div class="client-logo"><i class="bi bi-hdd-network"></i></div>
+          <h4>IP Technologies</h4>
+          <p>Soporte técnico y soluciones en TI</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="client-card">
+          <div class="client-logo"><i class="bi bi-key"></i></div>
+          <h4>Llaves Oskar</h4>
+          <p>Diseño de piezas gráficas y publicidad</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dark-stats mt-5 reveal">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Clientes y empresas</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-icon"><i class="bi bi-diagram-3"></i></div>
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Proyectos realizados</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-icon"><i class="bi bi-award"></i></div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Compromiso y calidad</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-icon"><i class="bi bi-star-fill"></i></div>
+          <div class="stat-num">Satisfacción</div>
+          <div class="stat-label">Resultados que generan valor</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-box mt-4 text-center reveal">
+      <i class="bi bi-quote"></i>
+      Cada proyecto es una oportunidad para crear soluciones que realmente marcan la diferencia. — MC.
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="container">
+    <p class="eyebrow mb-2">Escríbeme</p>
+    <h2 class="section-title mb-2">Hablemos</h2>
+    <p class="section-sub mb-5">Estoy lista para ayudarte a llevar tu idea al siguiente nivel.</p>
+
+    <div class="row g-5">
+      <div class="col-lg-5 reveal">
+        <div class="contact-item">
+          <div class="ico"><i class="bi bi-telephone-fill"></i></div>
+          <div>
+            <h5>Teléfono</h5>
+            <p>(+57) 313 732 8200</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <h5>Correo</h5>
+            <p>camila.rueda.0617@gmail.com<br>maria.camila.rueda.prado@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><i class="bi bi-linkedin"></i></div>
+          <div>
+            <h5>LinkedIn</h5>
+            <p>linkedin.com/in/camila-rueda-3913273b3/</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <h5>Ubicación</h5>
+            <p>Pasto, Nariño - Colombia</p>
+          </div>
+        </div>
+
+        <div class="map-placeholder mt-4">
+          <div class="location-chip">
+            <div class="ico"><i class="bi bi-geo-alt-fill"></i></div>
+            <div>
+              <h6>Pasto, Nariño - Colombia</h6>
+              <p>Disponible para proyectos presenciales y remotos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 reveal">
+        <div class="contact-form-card">
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold" for="nombre">Nombre</label>
+                <input type="text" class="form-control form-control-custom" id="nombre" placeholder="Nombre" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold" for="correo">Correo electrónico</label>
+                <input type="email" class="form-control form-control-custom" id="correo" placeholder="Correo electrónico" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-semibold" for="asunto">Asunto</label>
+                <input type="text" class="form-control form-control-custom" id="asunto" placeholder="Asunto" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-semibold" for="mensaje">Mensaje</label>
+                <textarea class="form-control form-control-custom" id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-teal w-100 w-md-auto">Enviar mensaje <i class="bi bi-send ms-1"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
+    <p class="mb-0">© <span id="year"></span> María Camila Rueda Prado. Todos los derechos reservados.</p>
+    <p class="mb-0">Hecho con <i class="bi bi-heart-fill" style="color:#f4b740;"></i> en Pasto, Colombia</p>
+  </div>
+</footer>
+
+<!-- Toast de confirmación -->
+<div id="toast-msg" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      <i class="bi bi-check-circle-fill me-2" style="color:#0e9c94;"></i>
+      <span id="toast-text">¡Mensaje enviado con éxito!</span>
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Año dinámico en footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Navbar: sombra al hacer scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // Cerrar menú móvil al hacer clic en un link
+  const navLinks = document.querySelectorAll('.nav-link-custom');
+  const navMenu = document.getElementById('navMenu');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navMenu.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+      }
+    });
+  });
+
+  // Scrollspy manual: resalta el link activo según la sección visible
+  const sections = document.querySelectorAll('section[id], header[id]');
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+  sections.forEach(sec => spyObserver.observe(sec));
+
+  // Animaciones al hacer scroll (reveal)
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Filtro de proyectos
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+  const noResults = document.getElementById('noResults');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      let visibleCount = 0;
+
+      projectItems.forEach(item => {
+        const cats = item.getAttribute('data-cat').split(' ');
+        const show = filter === 'todos' || cats.includes(filter);
+        item.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      noResults.classList.toggle('d-none', visibleCount !== 0);
+    });
+  });
+
+  // Formulario de contacto (validación simple + confirmación)
+  const form = document.getElementById('contactForm');
+  const toastEl = document.getElementById('toast-msg');
+  const toast = new bootstrap.Toast(toastEl, { delay: 3500 });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.classList.add('was-validated');
+      return;
+    }
+
+    const nombre = document.getElementById('nombre').value.trim();
+
+    document.getElementById('toast-text').textContent =
+      `¡Gracias, ${nombre}! Tu mensaje fue enviado con éxito.`;
+    toast.show();
+
+    form.reset();
+    form.classList.remove('was-validated');
+  });
+
+  // Botón "Descargar CV" (placeholder: reemplaza el href por el archivo real del CV)
+  document.getElementById('downloadCv').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('toast-text').textContent = 'El CV se descargará próximamente. ¡Gracias por tu interés!';
+    toast.show();
+  });
+
+});
+</script>
+</body>
+</html>
