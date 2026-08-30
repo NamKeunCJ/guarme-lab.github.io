@@ -1,0 +1,454 @@
+body {
+    background: url('../images/local2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+/* Filtro para iconos de polarizado */
+.icono_polarizado {
+    filter: drop-shadow(0px 0px 15px #6AC5E7) 
+            drop-shadow(0px 0px 30px #6AC5E7) 
+            drop-shadow(0px 0px 50px #6AC5E7);
+}
+
+.logo-superpuesto {
+    position: absolute;
+    top: 0;  /* Ajusta la posición verticalmente */
+    left: 0; /* Ajusta la posición horizontalmente */
+    z-index: 10; /* Asegura que esté por encima de la imagen */
+}
+
+@keyframes neonGlow {
+    0% {
+        filter: drop-shadow(0px 0px 5px #6AC5E7) 
+                drop-shadow(0px 0px 15px #6AC5E7) 
+                drop-shadow(0px 0px 30px #6AC5E7);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 10px #6AC5E7) 
+                drop-shadow(0px 0px 25px #6AC5E7) 
+                drop-shadow(0px 0px 45px #6AC5E7);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 5px #6AC5E7) 
+                drop-shadow(0px 0px 15px #6AC5E7) 
+                drop-shadow(0px 0px 30px #6AC5E7);
+    }
+}
+
+.icono_brillo {
+    animation: neonGlow 0.9s infinite alternate ease-in-out;
+}
+
+
+
+/* Efecto sombra*/
+.flotante_sombra {
+    position: relative;
+    display: inline-block;
+    
+    /* Sombra blanca para dar efecto de profundidad */
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.5);
+    
+    /* Perspectiva para simular que sobresale */
+    transform: perspective(500px) translateZ(20px);
+}
+
+/* Acordion de imagenes */
+.accordion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: linear-gradient(135deg, #000000, #000000);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-shadow: 
+        0px 15px 35px rgba(106, 197, 231, 0.15), /* Luz blanca sutil */
+        0px 25px 80px rgba(0, 0, 0, 0.95); /* Sombra más intensa */
+    backdrop-filter: blur(12px); /* Difuminado de fondo más fuerte */
+    border: 3px solid rgba(106, 197, 231, 0.2); /* Borde semi-transparente más visible */
+    transform: translateY(-12px); /* Más desplazamiento hacia arriba */
+}
+.accordion {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    gap: 5px;
+    overflow: hidden;
+}
+.panel {
+    flex: 1;
+    min-width: 80px;
+    background-size: cover;
+    background-position: center;
+    transition: flex 0.7s ease-in-out, filter 0.5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    filter: brightness(65%) saturate(120%);
+}
+.panel.active {
+    flex: 3;
+    filter: brightness(100%) saturate(140%);
+}
+.panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.panel.active::before {
+    background: rgba(0, 0, 0, 0);
+}
+.panel span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.panel.active span {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .accordion {
+        flex-direction: column;
+        height: 100%; /* Ocupar toda la pantalla */
+        width: 100%;
+    }
+    .panel {
+        width: 100%;
+        height: 15vh; /* Tamaño base de los paneles */
+        transition: height 0.5s ease-in-out, filter 0.5s ease-in-out;
+    }
+    .panel.active {
+        height: 90vh; /* Panel expandido */
+    }
+}
+/* ---- SECCIÓN MÉTODOS DE PAGO ---- */
+#metodos-pago {
+    background: linear-gradient(135deg, #111, #222, #111);
+    background-size: 400% 400%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* ---- ESTILO DE LOS MÉTODOS DE PAGO ---- */
+.metodo-pago {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    width: 300px;  
+    height: 150px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ---- EFECTO DE LUZ AL HACER HOVER ---- */
+.metodo-pago:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 25px rgba(143, 214, 249, 0.8), 0px 0px 5px rgba(141, 228, 228, 0.6) inset;
+}
+
+/* ---- ESTILO DE ICONOS ---- */
+.metodo-pago i {
+    color: #6AC5E7;
+    filter: drop-shadow(0px 0px 10px #6AC5E7);
+    font-size: 50px;
+}
+
+/* ---- ESTILO DE TEXTO ---- */
+.metodo-pago h5 {
+    color: #6AC5E7;
+    text-shadow: 0px 0px 10px #6AC5E7;
+}
+
+
+
+/* Fondo del primer section*/
+.fondo_section_1 {
+    background: url('../images/section1.JPG') no-repeat center/cover;
+    position: relative;
+}
+
+.fondo_section_1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); /* Oscurece el fondo */
+    z-index: 0;
+}
+
+.fondo_section_1 * {
+    position: relative;
+    z-index: 1;
+    color: white; /* Asegura que el texto se mantenga claro */
+}
+
+/* Fondo del segundo section*/
+.fondo_section_2 {
+    background: url('../images/pro.jpg') no-repeat center/cover;
+    position: relative;
+}
+
+.fondo_section_2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); /* Oscurece el fondo */
+    z-index: 0;
+}
+
+.fondo_section_2 * {
+    position: relative;
+    z-index: 1;
+    color: white; /* Asegura que el texto se mantenga claro */
+}
+
+/* Fondo del tercer section*/
+.fondo_section_3 {
+    background: url('../images/servicio3.jpeg') no-repeat center/cover;
+    position: relative;
+}
+
+.fondo_section_3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); /* Oscurece el fondo */
+    z-index: 0;
+}
+
+.fondo_section_3 * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Tooltip Whatsapp esquina inferior derecha*/
+.whatsapp-tooltip {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: none;
+    font-size: 14px;
+}
+
+/* Logo de la parte del nav*/
+.brand-logo {
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.brand-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Card de los comentarior o reseñas */
+ 
+.profile-card-5 {
+    margin-top: 20px;
+    position: relative;
+}
+
+.profile-card-5 .btn {
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 7px 20px;
+}
+
+.profile-card-5 .card-img-block {
+    width: 91%;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+}
+
+.profile-card-5 .card-img-block img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+}
+
+.profile-card-5 h5 {
+    color: #4e5e30;
+    font-weight: 600;
+}
+
+.profile-card-5 p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.profile-card-5 .btn-primary {
+    background-color: #4e5e30;
+    border-color: #4e5e30;
+}
+
+
+.card-img-block {
+    position: absolute;
+    width: 100%;
+    top: -40px; /* Ajusta la altura según sea necesario */
+    left: 50%;
+    transform: translateX(-55%); /* Centrado exacto */
+    display: flex;
+    justify-content: center;
+}
+
+.logo-flotante {
+    border-radius: 10px; /* Redondeo ligero */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: white;
+    padding: 5px;
+    max-width: 120px; /* Ajusta el tamaño según el logo */
+}
+
+
+/* Fondo inicio degradado */
+
+.imagen {
+    display: block;
+}
+
+.degradado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, black 1%, transparent 100%);
+}
+
+/* Linea para subrayar */
+.highlighted-text {
+    color: #6AC5E7; 
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.highlighted-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q100,-10 200,20' fill='transparent' stroke='red' stroke-width='5' stroke-dasharray='210' stroke-dashoffset='210'%3E%3Canimate attributeName='stroke-dashoffset' from='210' to='0' dur='0.3s' begin='2s' fill='freeze'/%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 100% 15px;
+}
+
+/* Icono instagram en la parte del footer */
+.instagram-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #6AC5E7; /* Color característico de Instagram */
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.instagram-circle:hover {
+    background-color: #f0d54c; /* Color más oscuro al pasar el mouse */
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #6AC5E7; /* Color en hover */
+}
+
+.contact-link svg {
+    transition: fill 0.3s ease;
+}
+
+.contact-link:hover svg {
+    fill: #6AC5E7; /* Cambio de color del icono en hover */
+}
+
+/*Boton whatsapp*/
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: breathe 2s ease-in-out infinite;
+  }
+  
+.whatsapp-btn i {
+    color: #fff;
+    font-size: 24px;
+    animation: beat 2s ease-in-out infinite;
+    text-decoration: none;
+}
+
+
+/*Estilos con animation contorno respirando Whatsapp*/
+@keyframes breathe {
+    0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+/*Estilos de animacion del icono latiendo*/
+@keyframes beat {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.2);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+.text_color_nav{
+    color: #fff;
+}
