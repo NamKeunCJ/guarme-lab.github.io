@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guarme Lab | Tecnología, Creatividad y Fabricación</title>
+  <meta name="description" content="Guarme Lab desarrolla software, diseño publicitario y fabricación digital en Pasto, Nariño, para impulsar marcas y negocios con soluciones reales.">
+
+  <!-- Ícono de la pestaña del navegador -->
+  <link rel="icon" type="image/svg+xml" href="static/images/logo/Logotipo.webp">
+
+  <!-- Se cargan las tipografías de Google Fonts utilizadas en todo el sitio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Se carga el framework Bootstrap 5 únicamente desde su CDN oficial -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Se cargan los íconos de Bootstrap Icons para reforzar la interfaz -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Se carga la hoja de estilos propia del proyecto, siempre después de Bootstrap -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       BARRA DE NAVEGACIÓN
+       Aquí se ubica el menú principal, fijo en la parte superior
+  ======================================================= -->
+  <header>
+    <nav class="navbar navbar-expand-lg navegacion-principal fixed-top" id="navegacionPrincipal">
+      <div class="container">
+
+        <!-- Marca / logotipo de la empresa -->
+        <a class="navbar-brand marca-guarme" href="#inicio">
+          <img src="static/images/logo/logo2.webp" alt="Logotipo de Guarme Lab" class="marca-guarme__icono">          
+        </a>
+
+        <!-- Botón hamburguesa, visible únicamente en pantallas pequeñas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuGuarme" aria-controls="menuGuarme" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Enlaces del menú, se colapsan en dispositivos móviles -->
+        <div class="collapse navbar-collapse justify-content-end" id="menuGuarme">
+          <ul class="navbar-nav enlaces-navegacion align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link enlace-menu" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link enlace-menu" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link enlace-menu" href="#nosotros">Sobre nosotros</a></li>
+            <li class="nav-item"><a class="nav-link enlace-menu" href="#proyectos">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link enlace-menu" href="#clientes">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link enlace-menu" href="#contacto">Contactos</a></li>
+            <li class="nav-item ms-lg-3">
+              <a href="#contacto" class="btn boton-primario boton-cotizar">
+                Cotiza tu proyecto <i class="bi bi-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================================================
+         SECCIÓN: INICIO
+         Presenta la propuesta de valor principal de la empresa
+    ======================================================= -->
+    <section id="inicio" class="seccion-hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+
+          <!-- Columna de texto principal -->
+          <div class="col-lg-6 contenido-hero" data-revelar>
+            <span class="etiqueta-hero">
+              <i class="bi bi-stars"></i> Tecnología &bull; Creatividad &bull; Fabricación
+            </span>
+
+            <h1 class="titulo-hero">
+              Ideas que construyen<br>
+              <span class="titulo-hero__resaltado">soluciones reales</span>
+            </h1>
+
+            <p class="parrafo-hero">
+              Desarrollo de software, diseño, publicidad y fabricación para impulsar tu marca y hacer crecer tu negocio.
+            </p>
+
+            <div class="botones-hero">
+              <a href="#servicios" class="btn boton-primario boton-grande">
+                Conoce nuestros servicios <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#contacto" class="btn boton-secundario boton-grande">Hablemos</a>
+            </div>
+
+            <!-- Lista de características cortas con ícono -->
+            <ul class="lista-caracteristicas">
+              <li>
+                <span class="lista-caracteristicas__icono"><i class="bi bi-bullseye"></i></span>
+                Soluciones a medida para cada cliente
+              </li>
+              <li>
+                <span class="lista-caracteristicas__icono"><i class="bi bi-gem"></i></span>
+                Innovación y calidad en cada proyecto
+              </li>
+              <li>
+                <span class="lista-caracteristicas__icono"><i class="bi bi-globe-americas"></i></span>
+                Compromiso local, impacto global
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna de la ilustración principal -->
+          <div class="col-lg-6 text-center" data-revelar data-revelar-retraso="150">
+            <img src="static/images/fotos/inicio.webp" alt="Ilustración de un portátil con código y una impresora 3D fabricando una pieza" class="imagen-hero img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior oscura con la ubicación y las redes sociales -->
+      <div class="barra-ubicacion">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div class="barra-ubicacion__texto">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Pasto, Nariño, Colombia</strong>
+              <span>Orgullosamente pastusos, trabajando para el mundo.</span>
+            </div>
+          </div>
+          <ul class="redes-sociales list-unstyled d-flex mb-0 gap-2">
+            <li><a href="https://www.linkedin.com/in/camila-rueda-3913273b3/" target="_blank" rel="noopener" aria-label="LinkedIn de Guarme Lab"><i class="bi bi-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram de Guarme Lab"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="https://wa.me/573137328200?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Guarme%20Lab%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20que%20ofrecen.%20%C2%BFMe%20pueden%20contar%20un%20poco%20m%C3%A1s%3F%20%C2%A1Gracias%21" target="_blank" rel="noopener" aria-label="WhatsApp de Guarme Lab"><i class="bi bi-whatsapp"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECCIÓN: SOBRE NOSOTROS
+         Explica quién es Guarme Lab, su misión, visión y valores
+    ======================================================= -->
+    <section id="nosotros" class="seccion seccion-nosotros">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+
+          <!-- Columna izquierda: texto institucional -->
+          <div class="col-lg-6" data-revelar>
+            <span class="etiqueta-seccion">Quiénes somos</span>
+            <h2 class="titulo-seccion">Pasión por la tecnología, compromiso con las ideas</h2>
+            <p class="texto-seccion">
+              En Guarme Lab convertimos ideas en soluciones digitales y físicas. Combinamos tecnología, creatividad y fabricación para ofrecer servicios integrales que impulsan marcas, negocios y proyectos.
+            </p>
+
+            <!-- Bloques de misión, visión y valores -->
+            <div class="bloque-institucional">
+              <div class="bloque-institucional__icono"><i class="bi bi-bullseye"></i></div>
+              <div>
+                <h3>Misión</h3>
+                <p>Crear soluciones innovadoras y personalizadas que generen valor y transformación en nuestros clientes.</p>
+              </div>
+            </div>
+
+            <div class="bloque-institucional">
+              <div class="bloque-institucional__icono"><i class="bi bi-eye"></i></div>
+              <div>
+                <h3>Visión</h3>
+                <p>Ser una empresa líder en Pasto y Nariño en desarrollo tecnológico, publicidad y fabricación personalizada.</p>
+              </div>
+            </div>
+
+            <div class="bloque-institucional">
+              <div class="bloque-institucional__icono"><i class="bi bi-heart"></i></div>
+              <div>
+                <h3>Valores</h3>
+                <p>Creatividad, compromiso, calidad, innovación y orgullo por nuestras raíces.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: imagen del espacio de trabajo y tarjeta de ubicación -->
+          <div class="col-lg-6" data-revelar data-revelar-retraso="150">
+            <div class="tarjeta-imagen-nosotros">
+              <img src="static/images/fotos/oficina.png" alt="Espacio de trabajo de Guarme Lab" class="img-fluid rounded-4">
+              <div class="tarjeta-ubicacion">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div>
+                  <strong>Pasto, Nariño</strong>
+                  <span>Somos de aquí, entendemos nuestra cultura y conectamos con lo que realmente necesitas.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fila de estadísticas de la empresa, con conteo animado -->
+        <div class="fila-estadisticas row text-center gy-4" data-revelar>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-estadistica">
+              <i class="bi bi-kanban"></i>
+              <span class="tarjeta-estadistica__numero" data-contador data-valor-final="10">0</span><span class="tarjeta-estadistica__mas">+</span>
+              <p>Proyectos completados</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-estadistica">
+              <i class="bi bi-people"></i>
+              <span class="tarjeta-estadistica__numero" data-contador data-valor-final="8">0</span><span class="tarjeta-estadistica__mas">+</span>
+              <p>Clientes satisfechos</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-estadistica">
+              <i class="bi bi-shield-check"></i>
+              <span class="tarjeta-estadistica__numero" data-contador data-valor-final="100">0</span><span class="tarjeta-estadistica__mas">%</span>
+              <p>Comprometidos con tu éxito</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-estadistica">
+              <i class="bi bi-lightbulb"></i>
+              <span class="tarjeta-estadistica__numero tarjeta-estadistica__numero--texto">Innovación</span>
+              <p>Tecnología que transforma ideas en realidades</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECCIÓN: SERVICIOS
+         Muestra los servicios agrupados por categoría mediante pestañas
+    ======================================================= -->
+    <section id="servicios" class="seccion seccion-servicios">
+      <div class="container">
+        <div class="encabezado-seccion" data-revelar>
+          <span class="etiqueta-seccion">Qué hacemos</span>
+          <h2 class="titulo-seccion">Soluciones completas para tu negocio</h2>
+        </div>
+
+        <!-- Pestañas para filtrar los servicios por categoría -->
+        <div class="pestanas-servicios" role="tablist" aria-label="Categorías de servicios" data-revelar>
+          <button type="button" class="pestana-servicio activa" data-categoria="tecnologia">Tecnología</button>
+          <button type="button" class="pestana-servicio" data-categoria="publicidad">Publicidad</button>
+          <button type="button" class="pestana-servicio" data-categoria="fabricacion">Fabricación</button>
+        </div>
+
+        <!-- Cuadrícula de tarjetas de servicio; cada tarjeta indica a qué categoría pertenece -->
+        <div class="row g-4 cuadricula-servicios" data-revelar>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor" data-categoria="tecnologia">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-code-slash"></i></div>
+              <h3>Desarrollo de software</h3>
+              <p>Soluciones a la medida para automatizar y optimizar procesos.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor" data-categoria="tecnologia">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-globe2"></i></div>
+              <h3>Aplicaciones web</h3>
+              <p>Aplicaciones modernas, escalables y seguras para tu negocio.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor" data-categoria="tecnologia">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-building-gear"></i></div>
+              <h3>Sistemas empresariales</h3>
+              <p>Sistemas integrales para gestionar y hacer crecer tu empresa.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor" data-categoria="tecnologia">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-gear-wide-connected"></i></div>
+              <h3>Automatización</h3>
+              <p>Optimizamos tareas y procesos para ahorrar tiempo y recursos.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor" data-categoria="tecnologia">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-display"></i></div>
+              <h3>Desarrollo de páginas web</h3>
+              <p>Sitios rápidos, responsivos y diseñados para convertir visitantes en clientes.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor" data-categoria="tecnologia">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-tools"></i></div>
+              <h3>Mantenimiento de software</h3>
+              <p>Soporte, actualizaciones y mejoras para que todo funcione siempre.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor d-none" data-categoria="publicidad">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-megaphone"></i></div>
+              <h3>Diseño de marca</h3>
+              <p>Identidades visuales que comunican la esencia de tu negocio.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor d-none" data-categoria="publicidad">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-instagram"></i></div>
+              <h3>Gestión de redes sociales</h3>
+              <p>Contenido y estrategia para conectar con tu público objetivo.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor d-none" data-categoria="publicidad">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-easel"></i></div>
+              <h3>Piezas publicitarias</h3>
+              <p>Material gráfico e impreso pensado para cada campaña.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor d-none" data-categoria="fabricacion">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-printer"></i></div>
+              <h3>Impresión 3D</h3>
+              <p>Prototipos y piezas personalizadas fabricadas a la medida.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor d-none" data-categoria="fabricacion">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-box-seam"></i></div>
+              <h3>Diseño de producto</h3>
+              <p>Del boceto a la pieza física, cuidando cada detalle.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-servicio-contenedor d-none" data-categoria="fabricacion">
+            <div class="tarjeta-servicio">
+              <div class="tarjeta-servicio__icono"><i class="bi bi-diagram-3"></i></div>
+              <h3>Fabricación por encargo</h3>
+              <p>Producción de figuras y piezas únicas bajo pedido.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Franja destacada con llamado a la acción -->
+        <div class="franja-cta" data-revelar>
+          <p><i class="bi bi-rocket-takeoff"></i> Tecnología que impulsa, creatividad que comunica, fabricación que hace realidad.</p>
+          <a href="#contacto" class="btn boton-claro">Cotiza tu proyecto <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECCIÓN: PROYECTOS
+         Presenta el portafolio de trabajos realizados, con filtro
+    ======================================================= -->
+    <section id="proyectos" class="seccion seccion-proyectos">
+      <div class="container">
+        <div class="encabezado-seccion" data-revelar>
+          <span class="etiqueta-seccion">Nuestros proyectos</span>
+          <h2 class="titulo-seccion">Ideas que ya son realidad</h2>
+        </div>
+
+        <!-- Botones para filtrar el portafolio de proyectos -->
+        <div class="filtro-proyectos" data-revelar>
+          <button type="button" class="filtro-proyectos__boton activo" data-filtro="todos">Todos</button>
+          <button type="button" class="filtro-proyectos__boton" data-filtro="tecnologia">Tecnología</button>
+          <button type="button" class="filtro-proyectos__boton" data-filtro="publicidad">Publicidad</button>
+          <button type="button" class="filtro-proyectos__boton" data-filtro="fabricacion">Fabricación</button>
+        </div>
+
+        <!-- Cuadrícula de proyectos -->
+        <div class="row g-4" id="cuadriculaProyectos" data-revelar>
+
+          <div class="col-md-6 col-lg-4 tarjeta-proyecto-contenedor" data-categoria="tecnologia">
+            <article class="tarjeta-proyecto">
+              <div class="tarjeta-proyecto__imagen">
+                <img src="static/images/fotos/proyectos/tecnologia/RELAB.png" alt="Sistema de Gestión Empresarial desarrollado por Guarme Lab">
+                <span class="tarjeta-proyecto__insignia">Relab</span>
+              </div>
+              <div class="tarjeta-proyecto__cuerpo">
+                <h3>Sistema de información para energías renovables</h3>
+                <small>Sistema web desarrollado para la recopilación, monitoreo y análisis de datos provenientes de sistemas de generación fotovoltaica e hídrica. Integra visualización de información, análisis de parámetros técnicos y gestión de datos para apoyar procesos de investigación y formación en energías renovables.</small>
+                <a href="#contacto" class="tarjeta-proyecto__enlace">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-proyecto-contenedor" data-categoria="tecnologia">
+            <article class="tarjeta-proyecto">
+              <div class="tarjeta-proyecto__imagen">
+                <img src="static/images/fotos/proyectos/tecnologia/Polarizados Jamundi.png" alt="Plataforma Educativa Online desarrollada por Guarme Lab">
+                <span class="tarjeta-proyecto__insignia">Polarizados Jamundí</span>
+              </div>
+              <div class="tarjeta-proyecto__cuerpo">
+                <h3>Sitio web empresarial</h3>
+                <small>Sitio web empresarial desarrollado para presentar los servicios de polarizado y protección vehicular. Cuenta con un diseño personalizado, responsivo y optimizado, secciones informativas y accesos directos de contacto para facilitar la comunicación con los clientes.</small>
+                <a href="#contacto" class="tarjeta-proyecto__enlace">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-proyecto-contenedor" data-categoria="tecnologia">
+            <article class="tarjeta-proyecto">
+              <div class="tarjeta-proyecto__imagen">
+                <img src="static/images/fotos/proyectos/tecnologia/Tulato.png" alt="Plataforma Educativa Online desarrollada por Guarme Lab">
+                <span class="tarjeta-proyecto__insignia">TULATO</span>
+              </div>
+              <div class="tarjeta-proyecto__cuerpo">
+                <h3>Plataforma web para análisis territorial</h3>
+                <small>Plataforma web orientada a la recopilación, visualización y análisis de información territorial. Integra mapas interactivos, filtros y recursos gráficos que facilitan la exploración de datos y apoyan procesos de investigación, aprendizaje y análisis del impacto social, económico y ambiental.</small>
+                <a href="#contacto" class="tarjeta-proyecto__enlace">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-proyecto-contenedor" data-categoria="tecnologia">
+            <article class="tarjeta-proyecto">
+              <div class="tarjeta-proyecto__imagen">
+                <img src="static/images/fotos/proyectos/tecnologia/LongQuant.png" alt="Plataforma Educativa Online desarrollada por Guarme Lab">
+                <span class="tarjeta-proyecto__insignia">LongQuant</span>
+              </div>
+              <div class="tarjeta-proyecto__cuerpo">
+                <h3>Plataforma web para análisis de criptomonedas</h3>
+                <small>Plataforma web enfocada en el análisis de información del mercado de criptomonedas. Incluye autenticación de usuarios, gestión de cuentas y una interfaz orientada a la consulta y análisis de información para apoyar la toma de decisiones mediante herramientas digitales.</small>
+                <a href="#contacto" class="tarjeta-proyecto__enlace">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-proyecto-contenedor" data-categoria="tecnologia">
+            <article class="tarjeta-proyecto">
+              <div class="tarjeta-proyecto__imagen">
+                <img src="static/images/fotos/proyectos/tecnologia/MicroStore Electronica.png" alt="Plataforma Educativa Online desarrollada por Guarme Lab">
+                <span class="tarjeta-proyecto__insignia">MicroStore Electronica</span>
+              </div>
+              <div class="tarjeta-proyecto__cuerpo">
+                <h3>Sitio web para electrónica automotriz</h3>
+                <small>Diseño y desarrollo de sitio web para la presentación y comercialización de componentes y repuestos de electrónica automotriz. Incluye catálogo de productos, información sobre servicios y asesoría técnica, además de canales de contacto para facilitar consultas y cotizaciones.</small>
+                <a href="#contacto" class="tarjeta-proyecto__enlace">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 tarjeta-proyecto-contenedor" data-categoria="fabricacion">
+            <article class="tarjeta-proyecto">
+              <div class="tarjeta-proyecto__imagen">
+                <img src="static/images/fotos/proyecto-3d.svg" alt="Figuras personalizadas impresas en 3D por Guarme Lab">
+                <span class="tarjeta-proyecto__insignia">Fabricación 3D</span>
+              </div>
+              <div class="tarjeta-proyecto__cuerpo">
+                <h3>Figuras Personalizadas Impresas en 3D</h3>
+                <p>Diseño e impresión de figuras personalizadas para coleccionistas.</p>
+                <a href="#contacto" class="tarjeta-proyecto__enlace">Ver proyecto <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Mensaje que se muestra únicamente si el filtro no encuentra proyectos -->
+        <p class="text-center mensaje-sin-resultados d-none" id="mensajeSinProyectos">
+          Aún no hay proyectos publicados en esta categoría.
+        </p>
+
+        <div class="text-center mt-5" data-revelar>
+          <a href="#contacto" class="btn boton-primario boton-grande">Ver todos los proyectos <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECCIÓN: CLIENTES
+         Muestra las marcas y empresas que confían en Guarme Lab
+    ======================================================= -->
+    <section id="clientes" class="seccion seccion-clientes">
+      <div class="container">
+        <div class="encabezado-seccion" data-revelar>
+          <span class="etiqueta-seccion">Nuestros clientes</span>
+          <h2 class="titulo-seccion">Empresas y marcas que confían en nosotros</h2>
+          <p class="texto-seccion texto-seccion--centrado">
+            Trabajamos de la mano con emprendedores, empresas e instituciones que buscan innovación, calidad y resultados.
+          </p>
+        </div>
+
+        <!-- Cuadrícula de logotipos de clientes -->
+        <div class="row g-3 cuadricula-clientes" data-revelar>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-cliente">
+              <i class="bi bi-cpu"></i>
+              <span>CREALAB<small>Innovación Digital</small></span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-cliente">
+              <i class="bi bi-mortarboard"></i>
+              <span>Universidad<small>CESMAG</small></span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-cliente">
+              <i class="bi bi-diagram-3"></i>
+              <span>IP Technologies<small>Soluciones IT</small></span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-cliente">
+              <i class="bi bi-shield-lock"></i>
+              <span>Llaves Oskar<small>Pasto</small></span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-cliente">
+              <i class="bi bi-rocket"></i>
+              <span>Emprende<small>Pasto</small></span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-cliente">
+              <i class="bi bi-shop"></i>
+              <span>Comercio<small>Local</small></span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-cliente">
+              <i class="bi bi-graph-up-arrow"></i>
+              <span>Marcas que<small>Crecen</small></span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-cliente">
+              <i class="bi bi-person-workspace"></i>
+              <span>Startups que<small>Inspiran</small></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cita destacada que refuerza la filosofía de trabajo con los clientes -->
+        <div class="franja-cita" data-revelar>
+          <i class="bi bi-quote"></i>
+          <p>Cada cliente es un aliado, cada proyecto una nueva oportunidad para crear impacto.</p>
+          <img src="static/images/logo/logotipo-negativo.webp" alt="Logotipo de Guarme Lab" class="franja-cita__logo">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SECCIÓN: CONTACTO
+         Presenta el formulario de contacto y la información de la empresa
+    ======================================================= -->
+    <section id="contacto" class="seccion seccion-contacto">
+      <div class="container">
+        <div class="encabezado-seccion" data-revelar>
+          <span class="etiqueta-seccion">Hablemos</span>
+          <h2 class="titulo-seccion">Cuéntanos tu idea, hagámosla realidad</h2>
+        </div>
+
+        <div class="row g-5">
+
+          <!-- Columna de información e ubicación de contacto -->
+          <div class="col-lg-5" data-revelar>
+            <h3 class="subtitulo-contacto">Información de contacto</h3>
+
+            <ul class="lista-datos-contacto list-unstyled">
+              <li>
+                <span class="lista-datos-contacto__icono"><i class="bi bi-telephone-fill"></i></span>
+                <a href="tel:+573137328200">(+57) 313 732 8200</a>
+              </li>
+              <li>
+                <span class="lista-datos-contacto__icono"><i class="bi bi-envelope-fill"></i></span>
+                <a href="mailto:guarmelab@gmail.com">guarmelab@gmail.com</a>
+              </li>
+              <li>
+                <span class="lista-datos-contacto__icono"><i class="bi bi-geo-alt-fill"></i></span>
+                <span>Pasto, Nariño, Colombia</span>
+              </li>
+              <li>
+                <span class="lista-datos-contacto__icono"><i class="bi bi-clock-fill"></i></span>
+                <span>Lunes a Viernes <br> 8:00 a.m. - 6:00 p.m.</span>
+              </li>
+            </ul>
+
+            <ul class="redes-sociales redes-sociales--contacto list-unstyled d-flex mb-4 gap-2">
+              <li><a href="https://www.linkedin.com/in/camila-rueda-3913273b3/" target="_blank" rel="noopener" aria-label="LinkedIn de Guarme Lab"><i class="bi bi-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram de Guarme Lab"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="https://wa.me/573137328200?text=%C2%A1Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Guarme%20Lab%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20que%20ofrecen.%20%C2%BFMe%20pueden%20contar%20un%20poco%20m%C3%A1s%3F%20%C2%A1Gracias%21" target="_blank" rel="noopener" aria-label="WhatsApp de Guarme Lab"><i class="bi bi-whatsapp"></i></a></li>
+            </ul>
+
+            <!-- Mapa incrustado que ubica la ciudad de Pasto, Nariño -->
+            <div class="contenedor-mapa">
+              <iframe
+                title="Ubicación de Guarme Lab en Pasto, Nariño"
+                src="https://www.google.com/maps?q=Pasto,Narino,Colombia&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <div class="contenedor-mapa__tarjeta">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div>
+                  <strong>Pasto, Nariño, Colombia</strong>
+                  <span>Disponibles para proyectos presenciales y remotos.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna del formulario de contacto -->
+          <div class="col-lg-7" data-revelar data-revelar-retraso="150">
+            <form
+              class="formulario-contacto"
+              id="formularioContacto"
+              action="https://script.google.com/macros/s/AKfycbyy_QCGOsKsmQy_6GANqe-cwmS25dNmPGoDufeXKoALI-5m9hwgqWx1D8IsWkeUsqU/exec"
+              method="POST"
+              novalidate>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="campoNombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control campo-formulario" id="campoNombre" name="nombre" placeholder="Escribe tu nombre" required minlength="2">
+                  <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="campoCorreo" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control campo-formulario" id="campoCorreo" name="correo" placeholder="ejemplo@correo.com" required>
+                  <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+                </div>
+                <div class="col-12">
+                  <label for="campoAsunto" class="form-label">Asunto</label>
+                  <input type="text" class="form-control campo-formulario" id="campoAsunto" name="asunto" placeholder="¿En qué podemos ayudarte?" required minlength="3">
+                  <div class="invalid-feedback">Por favor ingresa un asunto.</div>
+                </div>
+                <div class="col-12">
+                  <label for="campoMensaje" class="form-label">Cuéntanos tu proyecto</label>
+                  <textarea class="form-control campo-formulario" id="campoMensaje" name="mensaje" rows="5" placeholder="Describe brevemente tu idea o proyecto" required minlength="10"></textarea>
+                  <div class="invalid-feedback">Cuéntanos un poco más sobre tu proyecto.</div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn boton-primario boton-grande mt-4" id="botonEnviarMensaje">
+                <span class="boton-enviar__texto">Enviar mensaje</span> <i class="bi bi-send"></i>
+              </button>
+
+              <div class="alerta-envio alert alert-success mt-3 d-none" id="alertaEnvioExitoso" role="alert">
+                <i class="bi bi-check-circle-fill"></i>
+                ¡Mensaje enviado con éxito! Guarme Lab se pondrá en contacto pronto.
+              </div>
+
+              <div class="alerta-envio alert alert-danger mt-3 d-none" id="alertaEnvioError" role="alert">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                No se pudo enviar el mensaje. Intenta nuevamente o escribe directo a
+                <a href="mailto:guarmelab@gmail.com">guarmelab@gmail.com</a>.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ======================================================
+       PIE DE PÁGINA
+  ======================================================= -->
+  <footer class="pie-pagina">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <a href="#inicio" class="marca-guarme marca-guarme--pie">
+            <img src="static/images/logo/logo-negativo.webp" alt="Logotipo de Guarme Lab" class="marca-guarme__icono"> 
+          </a>
+          <p class="pie-pagina__descripcion">Tecnología, creatividad y fabricación al servicio de tus ideas.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="pie-pagina__derechos">
+            &copy; <span id="anioActual"></span> Guarme Lab. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante para volver al inicio de la página -->
+  <button type="button" id="botonVolverArriba" class="boton-volver-arriba" aria-label="Volver al inicio de la página">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Se carga el paquete de JavaScript de Bootstrap, necesario para el menú y otros componentes -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Se carga el script propio del proyecto al final para no bloquear la carga de la página -->
+  <script src="static/js/script.js"></script>
+</body>
+</html>
