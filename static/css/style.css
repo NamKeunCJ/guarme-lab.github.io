@@ -78,7 +78,7 @@ textarea:focus-visible {
   padding: 96px 0;
 }
 .seccion2 {
-  padding: 85px 0 15px 96px;
+  padding: 85px 0 15px;
 }
 
 .etiqueta-seccion {
@@ -322,7 +322,8 @@ textarea:focus-visible {
 }
 
 .imagen-footer {
-  width: 48rem;
+  width: 100%;
+  max-width: 480px;
   filter: drop-shadow(var(--sombra-suave));
 }
 
@@ -1008,3 +1009,4 @@ textarea:focus-visible {
     padding: 24px;
   }
 }
+
